@@ -80,13 +80,41 @@
 
     //functions on my own
     function makeName(firstName, middleName, lastName) {
-      let name = firstName + ' ' + middleName + ' ' + lastName
-      return name
+      let name = firstName + ' ' + middleName + ' ' + lastName;
+      return name;
     }
 
-    console.log(makeName('Robert', '"Beto"', 'O\'Rourke'))
-    console.log(makeName('Ксения', 'Михайловна', 'Еллис'))
-    console.log(makeName('Allen', 'Edward', 'Block'))
+    console.log(makeName('Robert', '"Beto"', 'O\'Rourke'));
+    console.log(makeName('Ксения', 'Михайловна', 'Еллис'));
+    console.log(makeName('Allen', 'Edward', 'Block'));
+
+    console.log('Making a better name function:')
+
+    function makeBetterName(firstName, middleName, lastName) {
+      if (middleName.length === 1) {
+        middleName = middleName + '.';
+      }
+      let fullName = firstName + ' ' + middleName + ' ' + lastName;
+      return fullName;
+    }
+    console.log(makeBetterName('Joan', 'Marie', 'Larkin'));
+    console.log(makeBetterName('John', 'F', 'Kennedy'));
+    console.log(makeBetterName('Jay', 'C', 'Hartzell'))
+
+    console.log("scoreCompare function");
+  function scoreCompare(home, away) {
+    if (home > away) {
+      return "Home team wins!";
+    } else if (home < away) {
+      return "Away team wins :(";
+    } else 
+      return "It was a tie."
+    }
+
+  console.log(scoreCompare(5,3));
+  console.log(scoreCompare(3,5));
+  console.log(scoreCompare(3,3));
+
   </script>
 </body>
 </html>
